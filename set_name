@@ -1,0 +1,7 @@
+#!/bin/sh
+
+read -p "Enter the new name: " NEW_NAME
+
+sed -i "s/memex_app/${NEW_NAME}/g" lib/main.dart pubspec.yaml README.md linux/CMakeLists.txt linux/my_application.cc default.nix test/widget_test.dart
+
+rm -f set_name
